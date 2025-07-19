@@ -1,0 +1,9 @@
+spring:
+  security:
+    user:
+      name: problemz
+      password: abc123
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
