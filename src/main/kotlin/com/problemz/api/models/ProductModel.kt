@@ -10,6 +10,6 @@ class Product(
     val name: String,
 
     @Column
-    val description: String
+    val description: String?
 
 ) : BaseModel()
