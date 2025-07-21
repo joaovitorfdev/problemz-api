@@ -1,5 +1,6 @@
 package com.problemz.api.schemas
 
+import com.problemz.api.models.Category
 import com.problemz.api.models.Product
 import java.time.Instant
 import java.util.UUID

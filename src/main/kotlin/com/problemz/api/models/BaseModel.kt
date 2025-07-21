@@ -15,5 +15,4 @@ abstract class BaseModel(
     @field:CreationTimestamp
     @Column(name = "created_at", updatable = false, nullable = false)
     val createdAt: Instant = Instant.now(),
-
 )
