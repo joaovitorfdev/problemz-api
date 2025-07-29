@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgres:
     image: postgres:17.2
@@ -25,7 +23,10 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/problemz
       SPRING_DATASOURCE_USERNAME: problemz
       SPRING_DATASOURCE_PASSWORD: abc123
-    command: ["java", "-jar", "app.jar"]
+
+    command: ["./mvnw", "spring-boot:run"]  # Usando o Maven para rodar em modo de desenvolvimento
+    # ou se você preferir a versão Jar:
+    # command: ["java", "-jar", "app.jar"]
 
 volumes:
   postgres_data:

@@ -7,17 +7,17 @@ import jakarta.persistence.*
 class Product(
 
     @Column(nullable = false)
-    val name: String,
+    var name: String,
 
     @Column
-    val description: String?,
+    var description: String?,
 
     @ManyToMany
     @JoinTable(
-        name = "product_category", // Nome da tabela de junção
-        joinColumns = [JoinColumn(name = "product_id")], // Chave estrangeira para o Produto
-        inverseJoinColumns = [JoinColumn(name = "category_id")] // Chave estrangeira para a Categoria
+        name = "product_category",
+        joinColumns = [JoinColumn(name = "product_id")],
+        inverseJoinColumns = [JoinColumn(name = "category_id")]
     )
-    val categories: Set<Category> = HashSet()
+    var categories: MutableSet<Category> = mutableSetOf()
 
 ) : BaseModel()

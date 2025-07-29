@@ -9,5 +9,4 @@ class Category (
     @Column(nullable = false)
     val name: String,
 
-val categories: Set<Category> = HashSet()
 ): BaseModel()
